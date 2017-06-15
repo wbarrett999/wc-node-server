@@ -27,6 +27,7 @@ app.get('/contact', function(req, res){
 
 // Tell the server how to start
 // Our server URL is localhost:3000
-app.listen(3000, function() {
-    console.log('Server is running on PORT 3000')
+const port = process.env.PORT || 3000
+app.listen(port, function() {
+    console.log(`Server is running on PORT ${port}`)
 })
